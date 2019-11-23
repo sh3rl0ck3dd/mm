@@ -4,8 +4,20 @@
       <div class="inside-first"> 
       <div class="logo">
 
-        <img src="../assets/images/mmlogo.png">
+        <img class="logoimage" src="../assets/images/mm_white.png">
         
+      </div>
+      <div class="baner-text">
+          <div class="banner-text-head">
+            Lorem ipsum dolor sit amet
+          </div>
+          <div class="banner-text-para">
+            
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laborisexercitation ullamco laborisexercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat mrudul suck. 
+          </div>
+
       </div>
       <div class="first-right">
           <div class="login">
@@ -14,6 +26,7 @@
          <div class="blogs">
            <div class="blog-btn"><router-link class="linktag" to="/blogs">Blogs +</router-link></div>
          </div>
+         
       </div>
       </div>
       <div class="inside-first-card">
@@ -101,6 +114,115 @@
       </div>
         </div>
       </div>   
+
+          <div class="third">
+      <div class="third-child">
+        <div class="third-cardone">
+           <div class="banner-card cardthree">
+          <div class="banner-card-image">
+            <img class="nir-img" src="../assets/images/nir.jpg">
+          </div>
+          <div class="banner-card-head">
+            HOW WE DO IT
+          </div>
+          <div class="banner-card-desc">
+            Consistency and proper knowledge makes everything happen click here to know more.
+          </div>
+        </div>
+      </div>
+      <div class="thirdtwo">
+          <img  class="thirdtwoimg" src="../assets/images/about.png">
+      </div>
+      <div class="thirdthree">
+        <div> <img  class="thirddown" src="../assets/images/service-bg.jpg"></div>
+      </div>
+
+      <div class="thirdfur">
+          Tired of How you look in mirror?
+      </div>
+      <div class="thirdfive">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et </p>
+        <p>dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. </p>
+      </div>
+        </div>
+      </div>   
+
+
+          <div class="third">
+      <div class="third-child">
+        <div class="third-cardone">
+           <div class="banner-card cardthree">
+          <div class="banner-card-image">
+            <img class="nir-img" src="../assets/images/nir.jpg">
+          </div>
+          <div class="banner-card-head">
+            HOW WE DO IT
+          </div>
+          <div class="banner-card-desc">
+            Consistency and proper knowledge makes everything happen click here to know more.
+          </div>
+        </div>
+      </div>
+      <div class="thirdtwo">
+          <img  class="thirdtwoimg" src="../assets/images/about.png">
+      </div>
+      <div class="thirdthree">
+        <div> <img  class="thirddown" src="../assets/images/service-bg.jpg"></div>
+      </div>
+
+      <div class="thirdfur">
+          Tired of How you look in mirror?
+      </div>
+      <div class="thirdfive">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et </p>
+        <p>dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. </p>
+      </div>
+        </div>
+      </div>  
+
+      <div class="fourth">
+        <div class="col-fourth-1">
+             <div class="banner-card cardfourth">
+              <div class="banner-card-image">
+                <img class="nir-img-fourthcard" src="../assets/images/nir.jpg">
+              </div>
+              <div class="banner-card-head">
+                HOW WE DO IT
+              </div>
+              <div class="banner-card-desc">
+                Consistency and proper knowledge makes everything happen click here to know more.
+              </div>
+            </div>
+        </div>
+        <div class="col-fourth-2">
+              <div class="buttoncenter-fourth">
+                
+                  click Here
+                
+              </div>
+
+        </div>
+        <div class="col-fourth-3">
+             <div class="banner-card cardfourth">
+              <div class="banner-card-image">
+                <img class="nir-img-fourthcard" src="../assets/images/nir.jpg">
+              </div>
+              <div class="banner-card-head">
+                HOW WE DO IT
+              </div>
+              <div class="banner-card-desc">
+                Consistency and proper knowledge makes everything happen click here to know more.
+              </div>
+            </div>
+        </div>
+      </div>
+
       <div class="morebutton">
         <div class="btn-about">Click to know more</div>
       </div>   
@@ -126,6 +248,20 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
 
+}
+.baner-text{
+  position: absolute;
+  top:240px;
+  left:20px;
+  color: white;
+  width: 35%;
+}
+.banner-text-head{
+  font-size: 60px;
+}
+.banner-text-para{
+  font-size: 21px;
+  text-align: center;
 }
 .inside-first{
   display: flex;
@@ -175,6 +311,7 @@ export default {
 }
 .inside-first{
   height: 100vh;
+  position: relative;
 }
 .inside-first-card{
   display: flex;
@@ -229,7 +366,7 @@ margin-top: 100px;
 }
 
 .second-head{
-color: orangered;
+color: #00cccc;
   margin-top: 30px;
   font-size: 24px;
 }
@@ -239,7 +376,7 @@ width: 210px;
 }
 .third{
   margin-top: 100px;
-  background-image: url(../assets/images/tempbac.png);
+  background-image: url(../assets/images/lightbluebg.png);
  background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -258,7 +395,7 @@ width: 210px;
   grid-column: 2/6 ;
 }
 .cardthree{
-  background-color:#ffdacc;
+  background-color:#ccffff;
 
 }
 .thirdtwo{
@@ -266,14 +403,16 @@ width: 210px;
   grid-column:5/10;
 }
 .thirdtwoimg{
-  height: 480px;
+  height: 550px;
 
 }
 .thirdthree{
   grid-row:10/12;
   grid-column:8/12;
+
 }
 .thirddown{
+  transform: translate(0px , 30px);
   height: 200px;
   
 }
@@ -308,5 +447,59 @@ width: 210px;
   text-decoration: none;
   color: white;
 }
+.logoimage{
+width: 100px;
+}
+.fourth{
+  display: flex;
+  width: 100%;
+  margin-top:120px;
+}
+.col-fourth-1{
+  width: 20%;
+  margin: 5%;
+}
+.col-fourth-2{
+  background-image: url(../assets/images/center.jpg);
+  width: 40%;
+}
+.col-fourth-3{
+  width: 20%;
+  margin: 5%
+}
+.fourth-center-img{
+  width: 100%;
+}
+.nir-img-fourthcard{
+  height: 250px ;
+  margin-left:25px;
+}
+.cardfourth{
+
+  background-color:#ccffff;
+  height: 38  0px;
+
+
+}
+.buttoncenter-fourth{
+  background-color: black;
+  padding: 20px 40px;
+  text-align: center;
+
+  border-radius: 30px;
+  color:white;
+  width:90px;
+  transform:translate(100%,500%);
+  cursor: pointer;
+}
+.buttoncenter-fourth:hover{
+  background-color: white;
+  color:black;
+
+  
+
+}
+
+
 </style>
 <script ></script>
