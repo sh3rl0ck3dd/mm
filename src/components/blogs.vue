@@ -18,36 +18,43 @@
  </div>
   
 </div>
+<div class="addform-butt"  v-on:click="showform = !showform">add form</div>
+  <div v-if="showform" class="addform">
+      <div>
+    <label>name</label>
+      <input type="text" v-model="blogname" >
+    </div>
+    <div>
+    <label>text</label>
+      <textarea type="text" v-model="blogtext" ></textarea>
+    </div>
+    <div calss="addform-butt" v-on:click="postreq">submit</div>
+
+  </div>
 <div class="mainblogs">
   <template v-for="item in blogdata">
+  
+
   <div class="card">
   <div class="cardimgparent">
     <img class="cardimg" src="../assets/images/blogg.jpg">
   </div>
     <div class="heading">
 
-      {{item.head}}
+      {{item.writer_name}}
     </div>
     <div class="desc">
-      {{item.text}}
+      {{item.blog_text}}
     </div>
     </div>
   </template>
   </div>
+
 </div>
 
 </template>
 
-<script>
-export default {
 
-  data () {
-    return {
-      blogdata: [{"head":"hello world","text":" Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"},{"head":"hello world","text":" Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"},{"head":"hello world","text":" Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"},{"head":"hello world","text":" Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"}]
-    }
-  }
-}
-</script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
@@ -99,6 +106,7 @@ export default {
 }
 .desc{
   font-size: 18px;
+  width: 100%;
 }
 .bannerone{
   width: 50%;
@@ -126,4 +134,92 @@ export default {
   width:80%;
   border-radius:10px;
 }
+.addform{
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  background-color: #eee;
+}
+.addform-butt{
+  text-align: center;
+  margin:20px auto;
+  background-color: black;
+  color:white;
+  width: 100px;
+  border-radius: 10px;
+}
 </style>
+<script >
+  import axios from 'axios'
+
+
+   export default {
+
+   data () {
+   return {
+     blogdata: [],
+     showform:false,
+     blogtext:"",
+     blogname:"",
+   }
+   },
+   computed: {
+  },
+    methods: {
+  
+    getblogs()
+  {
+       axios
+      .get('http://localhost:5000/myview/list_all_blogs')
+      .then(response => {
+        console.log(response.data); 
+        this.blogdata=response.data;
+      })
+      .catch(error => {
+        console.log(error)
+        this.errored = true
+      })
+      .finally(() => this.loading = false)
+  },
+
+ postreq(){
+
+     var dataObj = {
+        "blog_text":this.blogtext,
+        "writer_name": this.blogname
+      
+       }
+
+       var form_data = new FormData();
+
+        for ( var key in dataObj ) {
+            form_data.append(key, dataObj[key]);
+        }
+
+
+       axios
+      .post('http://127.0.0.1:5000/myview/new_blog_post',form_data)
+      .then(response => {
+        console.log(response.data); 
+        this.getblogs();
+        
+      })
+      .catch(error => {
+        console.log(error)
+        this.errored = true
+      })
+      .finally(() => this.loading = false)
+
+ }
+
+   },
+   beforeMount: function() {
+     this.getblogs();
+
+    }
+   }
+// {"head":"hello world","text":" Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"},{"head":"hello world","text":" Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"},{"head":"hello world","text":" Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"},{"head":"hello world","text":" Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"}
+
+
+
+</script>

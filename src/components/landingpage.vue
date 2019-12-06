@@ -80,40 +80,7 @@
       </div>
     </div>
 
-    <div class="third">
-      <div class="third-child">
-        <div class="third-cardone">
-           <div class="banner-card cardthree">
-          <div class="banner-card-image">
-            <img class="nir-img" src="../assets/images/nir.jpg">
-          </div>
-          <div class="banner-card-head">
-            HOW WE DO IT
-          </div>
-          <div class="banner-card-desc">
-            Consistency and proper knowledge makes everything happen click here to know more.
-          </div>
-        </div>
-      </div>
-      <div class="thirdtwo">
-          <img  class="thirdtwoimg" src="../assets/images/about.png">
-      </div>
-      <div class="thirdthree">
-        <div> <img  class="thirddown" src="../assets/images/service-bg.jpg"></div>
-      </div>
-
-      <div class="thirdfur">
-          Tired of How you look in mirror?
-      </div>
-      <div class="thirdfive">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et </p>
-        <p>dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. </p>
-      </div>
-        </div>
-      </div>   
+  
 
           <div class="third">
       <div class="third-child">
@@ -149,6 +116,45 @@
       </div>
         </div>
       </div>   
+
+
+
+          <div class="fourth">
+        <div class="col-fourth-1">
+             <div class="banner-card cardfourth">
+              <div class="banner-card-image">
+                <img class="nir-img-fourthcard" src="../assets/images/nir.jpg">
+              </div>
+              <div class="banner-card-head">
+                HOW WE DO IT
+              </div>
+              <div class="banner-card-desc">
+                Consistency and proper knowledge makes everything happen click here to know more.
+              </div>
+            </div>
+        </div>
+        <div class="col-fourth-2">
+              <div class="buttoncenter-fourth">
+                
+                  click Here
+                
+              </div>
+
+        </div>
+        <div class="col-fourth-3">
+             <div class="banner-card cardfourth">
+              <div class="banner-card-image">
+                <img class="nir-img-fourthcard" src="../assets/images/nir.jpg">
+              </div>
+              <div class="banner-card-head">
+                HOW WE DO IT
+              </div>
+              <div class="banner-card-desc">
+                Consistency and proper knowledge makes everything happen click here to know more.
+              </div>
+            </div>
+        </div>
+      </div>
 
 
           <div class="third">
@@ -186,42 +192,7 @@
         </div>
       </div>  
 
-      <div class="fourth">
-        <div class="col-fourth-1">
-             <div class="banner-card cardfourth">
-              <div class="banner-card-image">
-                <img class="nir-img-fourthcard" src="../assets/images/nir.jpg">
-              </div>
-              <div class="banner-card-head">
-                HOW WE DO IT
-              </div>
-              <div class="banner-card-desc">
-                Consistency and proper knowledge makes everything happen click here to know more.
-              </div>
-            </div>
-        </div>
-        <div class="col-fourth-2">
-              <div class="buttoncenter-fourth">
-                
-                  click Here
-                
-              </div>
 
-        </div>
-        <div class="col-fourth-3">
-             <div class="banner-card cardfourth">
-              <div class="banner-card-image">
-                <img class="nir-img-fourthcard" src="../assets/images/nir.jpg">
-              </div>
-              <div class="banner-card-head">
-                HOW WE DO IT
-              </div>
-              <div class="banner-card-desc">
-                Consistency and proper knowledge makes everything happen click here to know more.
-              </div>
-            </div>
-        </div>
-      </div>
 
       <div class="morebutton">
         <div class="btn-about">Click to know more</div>
@@ -244,9 +215,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .first{
-  background-image: url(../assets/images/2.jpg);
+  background-image: url(../assets/images/service-bg.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover  ;
+  animation-duration: 1s;
+  animation-name: slidein;;
 
 }
 .baner-text{
@@ -302,8 +275,8 @@ export default {
 }
 .blog-btn{
   text-decoration: none;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color:red;
   border-radius: 30px;
   font-size: 14px;
   font-weight: 700;
@@ -381,6 +354,7 @@ width: 210px;
   background-size: cover;
   display: flex;
   height: 800px;
+
 }
 .third-child{
   display: grid;
@@ -445,7 +419,7 @@ width: 210px;
 }
 .linktag{
   text-decoration: none;
-  color: white;
+  color: black;
 }
 .logoimage{
 width: 100px;
@@ -496,10 +470,24 @@ width: 100px;
   background-color: white;
   color:black;
 
-  
-
 }
 
+
+
+
+
+
+
+
+@keyframes slidein {
+  from {
+    margin-left: -100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
 
 </style>
 <script ></script>
